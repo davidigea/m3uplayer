@@ -14,5 +14,5 @@ python src/main.py
 
 To create an .exe, you can use pyinstaller:
 ```bash
-pyinstaller --noconsole --add-data ".\img\icon.ico:."  -p .\venv\Lib\site-packages\ --onefile src/main.py
+pyinstaller --icon=".\img\icon.ico" --noconsole --add-data ".\img\icon.ico:."  -p .\venv\Lib\site-packages\ --onefile src/main.py
 ```

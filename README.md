@@ -11,3 +11,8 @@ To run the app:
 ```bash
 python src/main.py
 ```
+
+To create an .exe, you can use pyinstaller:
+```bash
+pyinstaller --noconsole --add-data ".\img\icon.ico:."  -p .\venv\Lib\site-packages\ --onefile src/main.py
+```

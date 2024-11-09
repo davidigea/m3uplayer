@@ -23,7 +23,10 @@ if __name__ == '__main__':
 
     # Iniciar la interfaz gráfica
     root = tk.Tk()
-    icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'img', 'icon.ico')
+    if hasattr(sys, "_MEIPASS"):
+        icon_path = os.path.join(sys._MEIPASS, 'icon.ico')
+    else:
+        icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'img', 'icon.ico')
     app = M3UPlayerApp(root, PATH_TO_LIST, conf)
     root.iconbitmap(icon_path)
     root.mainloop()

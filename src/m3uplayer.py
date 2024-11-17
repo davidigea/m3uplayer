@@ -200,7 +200,7 @@ class M3UPlayerApp:
                 # Matar si hay uno en ejecución
                 self.player.kill()
             url = self.grouped_channels[self.current_group][selected_title]['url']
-            self.player = subprocess.Popen([self.conf['vlc_path'], '--meta-title', selected_title, url])
+            self.player = subprocess.Popen([self.conf['vlc_path'], '--meta-title', selected_title, '--network-caching=1000', '--repeat', '--loop', url])
 
     def show_channel_list(self, group_title):
         """Muestra los canales de un grupo (título) en la misma ventana."""
